@@ -1,5 +1,5 @@
 var local = document.getElementById("local");
-var sesson = document.getElementById("session")
+var session = document.getElementById("session")
 
 //to initiate the values of local and session
 function initiate()
