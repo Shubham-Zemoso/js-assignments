@@ -141,6 +141,7 @@ function openModal(tableNo) {
 			<td>${i}.</td>
 			<td>${menu[item].name}</td>
 			<td>${menu[item].cost}</td>
+			<td>${menu[item].cost*qty}</td>
 			<td><input type="number" id="qty${i}" min = "1" value="${qty}" oninput="changeQty('${i}','${item}','${tableNo}')" /></td>
 			<td><button id="delete" onclick="deleteItem('${item}','${tableNo}')">Delete</button></td>
 		</tr>
@@ -153,7 +154,7 @@ function openModal(tableNo) {
 	total.innerHTML = `TOTAL: ${cost}`;
 	document.getElementById(
 		"modal-footer"
-	).innerHTML = `<p id="bill" onclick="generateBill('${tableNo}')" >CLOSE SESSION(GENERATE BILL)</p>`;
+	).innerHTML = `<p id="bill" onclick="generateBill('${tableNo}')" >GENERATE BILL</p>`;
 }
 
 //Drop start
